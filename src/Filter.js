@@ -15,3 +15,12 @@ Filter.prototype.setUpperLimit = function(upperLimit) {
 Filter.prototype.returnSoundwave = function() {
   return this._soundWave
 }
+
+Filter.prototype.checkSoundwave = function() {
+  for (var i = 0; i < this._soundWave.length; i++)
+  if (this._soundWave[i] < this._lowerLimit) {
+    this._soundWave[i] = this._lowerLimit
+  } else if (this._soundWave[i] > this._upperLimit) {
+    this._soundWave[i] = this._upperLimit
+  }
+}

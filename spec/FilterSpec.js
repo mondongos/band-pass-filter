@@ -25,7 +25,16 @@ describe("Filter", function() {
 
   it("should change the integer in array if less than lower limit", function() {
     filter.checkSoundwave()
-    expect(filter.returnSoundwave()).toEqual([90, 90, 100, 110, 120])
+    expect(filter.returnSoundwave()).toEqual([90, 90, 100, 110, 110])
+  })
+
+  it("should change the integer in array if less than upper limit", function() {
+    filter.checkSoundwave()
+    expect(filter.returnSoundwave()).toEqual([90, 90, 100, 110, 110])
+  })
+
+  it("should check that all items in array are integers", function() {
+  
   })
 
 });
